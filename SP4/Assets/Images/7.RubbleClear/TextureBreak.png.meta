@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: dcb9df7f48ca592439319f9bbb3d2c23
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: TextureBreak_0
+    21300002: TextureBreak_1
+    21300004: TextureBreak_2
+    21300006: TextureBreak_3
+    21300008: TextureBreak_4
+    21300010: TextureBreak_5
+    21300012: TextureBreak_6
+    21300014: TextureBreak_7
+    21300016: TextureBreak_8
+    21300018: TextureBreak_9
+    21300020: TextureBreak_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: TextureBreak_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 550
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 535
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 391
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_3
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 392
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_4
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 399
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_5
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 232
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 231
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 220
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 40
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_9
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 36
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TextureBreak_10
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 36
+        width: 131
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
