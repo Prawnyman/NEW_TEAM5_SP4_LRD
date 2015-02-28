@@ -1,6 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\06. WW2 Sneaking\WW2CharacterScript.cs">
+    <Files>
+      <File FileName="Assets\Scripts\0A. All Levels\GlobalVariables.cs" Line="30" Column="1" />
+      <File FileName="Assets\Scripts\06. WW2 Sneaking\WW2GuardScript.cs" Line="68" Column="1" />
+      <File FileName="Assets\Scripts\06. WW2 Sneaking\WW2CharacterScript.cs" Line="67" Column="89" />
+      <File FileName="Assets\Scripts\06. WW2 Sneaking\WW2LevelScript.cs" Line="20" Column="68" />
+    </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />

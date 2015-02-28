@@ -17,7 +17,7 @@ public class WW2LevelScript : MonoBehaviour {
 		GlobalVariables.lastLevel = Application.loadedLevel;
 
 		//Create character
-		GameObject newCharacter = Instantiate(character, new Vector3(-8.2f, 0, 0), Quaternion.identity) as GameObject;
+		GameObject newCharacter = Instantiate(character, new Vector3(-8.0f, 0, 0), Quaternion.identity) as GameObject;
 		newCharacter.tag = "Character";
 		theCharacter = newCharacter;
 
@@ -53,7 +53,7 @@ public class WW2LevelScript : MonoBehaviour {
 			audio.clip = winSound;
 			audio.Play();
 		}
-		yield return new WaitForSeconds (2.4f);
+		yield return new WaitForSeconds (winSound.length);
 		Application.LoadLevel ("0B. Level Transition");
 	}
 	
@@ -64,7 +64,7 @@ public class WW2LevelScript : MonoBehaviour {
 			audio.clip = loseSound;
 			audio.Play();
 		}
-		yield return new WaitForSeconds (0.8f);
+		yield return new WaitForSeconds (loseSound.length);
 		Application.LoadLevel ("0B. Level Transition");
 	}
 }
