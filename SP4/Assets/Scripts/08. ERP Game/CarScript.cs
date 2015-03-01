@@ -3,12 +3,15 @@ using System.Collections;
 
 public class CarScript : MonoBehaviour {
 	
-	private Vector3 speed = new Vector3(10.0f, 0, 0);
+	private float difficulty = GlobalVariables.levelsPlayed * 0.5f;
+	
+	private Vector3 speed;
 		
 	GameObject Timer;
 
 	// Use this for initialization
 	void Start () {
+		speed = new Vector3(10.0f + difficulty, 0, 0);
 		Timer = GameObject.FindGameObjectWithTag("timer");
 	}
 	

@@ -50,10 +50,12 @@ public class SpawnCarScript : MonoBehaviour {
 		Timer = GameObject.FindGameObjectWithTag("timer");
 		while(true)
 		{
-			yield return new WaitForSeconds(Random.Range(0.5f, 1));
 			currentLane = GetRandomEnum<Lanes>();
 			if (Timer.GetComponent<TimerScript>().timeLeft > 0)
+			{
 				SpawnCar(currentLane);
+			}
+			yield return new WaitForSeconds(Random.Range(0.5f, 1));
 		}
 	}
 	
