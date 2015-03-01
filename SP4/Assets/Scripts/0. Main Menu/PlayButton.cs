@@ -8,6 +8,7 @@ public class PlayButton : MonoBehaviour
 
 	public Sprite normal;
 	public Sprite down;
+	public AudioClip MainGameMusic;
 	private SpriteRenderer spriteRenderer;
 	
 	private void OnEnable()
@@ -32,6 +33,9 @@ public class PlayButton : MonoBehaviour
 		//Application.LoadLevel(UnityEngine.Random.Range(1, Application.levelCount));
 		Application.LoadLevel(UnityEngine.Random.Range(3, Application.levelCount));
 		GlobalVariables.Restart();
+
+		//Play music
+		GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManagerScript>().changeMusic(MainGameMusic);
 	}
 
 	private void pressedHandler(object sender, EventArgs e)

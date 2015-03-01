@@ -62,6 +62,7 @@ public class WW2CharacterScript : MonoBehaviour {
 
 				this.transform.Translate(dir * Time.deltaTime * 5, Space.World);
 
+				//Bind character to world
 				if(this.transform.position.x > maxPoint.x - half_size || this.transform.position.x < minPoint.x + half_size){
 					this.transform.Translate(new Vector2(-dir.x * Time.deltaTime * 5, 0), Space.World);
 				}

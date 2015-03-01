@@ -48,7 +48,7 @@ public class LevelInit : MonoBehaviour {
 			audio.clip = winSound;
 			audio.Play();
 		}
-		yield return new WaitForSeconds (2.4f);
+		yield return new WaitForSeconds (winSound.length);
 		Application.LoadLevel ("0B. Level Transition");
 	}
 
@@ -59,7 +59,7 @@ public class LevelInit : MonoBehaviour {
 			audio.clip = loseSound;
 			audio.Play();
 		}
-		yield return new WaitForSeconds (1.1f);
+		yield return new WaitForSeconds (loseSound.length);
 		Application.LoadLevel ("0B. Level Transition");
 	}
 }

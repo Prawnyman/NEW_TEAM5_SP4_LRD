@@ -16,6 +16,7 @@ TagManager:
   - blackheart
   - Boat
   - Car
+  - MusicManager
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

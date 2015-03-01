@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WW2GuardScript : MonoBehaviour {
 	private Vector2 dir;
-	private float speed = 5.0f;
+	private float speed = 3.0f;
 	private Vector2 oldPos;
 
 	private Animator animator;
