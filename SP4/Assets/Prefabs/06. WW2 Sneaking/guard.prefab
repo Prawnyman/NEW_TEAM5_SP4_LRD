@@ -116,8 +116,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .5, y: .75}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: .300000012, y: .300000012}
+  m_Center: {x: 0, y: -.0549999997}
 --- !u!82 &8264736
 AudioSource:
   m_ObjectHideFlags: 1

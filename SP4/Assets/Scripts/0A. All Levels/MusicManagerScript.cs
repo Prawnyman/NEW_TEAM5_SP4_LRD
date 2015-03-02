@@ -17,6 +17,10 @@ public class MusicManagerScript : MonoBehaviour {
 
 		if(StopOnStart){
 			gameMusic.Stop();
+
+			if(NewMusic == null){
+				gameMusic.clip = NewMusic;
+			}
 		}
 	}
 
@@ -45,5 +49,12 @@ public class MusicManagerScript : MonoBehaviour {
 	}
 	public void Stop(){
 		gameMusic.Stop();
+	}
+
+	public void DisableMusic(){
+		gameMusic.volume = 0.0f;
+	}
+	public void EnableMusic(){
+		gameMusic.volume = 1.0f;
 	}
 }

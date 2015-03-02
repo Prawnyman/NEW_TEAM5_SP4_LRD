@@ -13,7 +13,7 @@ public class PlayButton : MonoBehaviour
 	
 	private void OnEnable()
 	{
-		spriteRenderer = GetComponent<SpriteRenderer>();	
+		spriteRenderer = GetComponent<SpriteRenderer>();
 		// subscribe to gesture's Tapped event
 		GetComponent<TapGesture>().Tapped += tappedHandler;
 		GetComponent<PressGesture>().Pressed += pressedHandler;
