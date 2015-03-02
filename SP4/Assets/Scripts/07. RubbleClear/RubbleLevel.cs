@@ -77,6 +77,7 @@ public class RubbleLevel : MonoBehaviour
 
 	private IEnumerator Win ()
 	{
+		TimerScript.running = false;
 		GlobalVariables.levelPassed = true;
 		if (!audio.isPlaying) {
 			audio.clip = winSound;

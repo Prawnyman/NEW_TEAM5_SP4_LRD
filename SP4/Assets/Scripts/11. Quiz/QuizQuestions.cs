@@ -26,7 +26,7 @@ public class QuizQuestions : MonoBehaviour {
 		startY = Screen.height * 0.2f;
 		btn_length = Screen.width * 0.4f;
 		btn_height = Screen.height * 0.1f;
-		question = Random.Range(1, 10);
+		question = Random.Range(1, 1);
 	}
 
 	void OnGUI() {
@@ -46,6 +46,7 @@ public class QuizQuestions : MonoBehaviour {
 
 	private IEnumerator Win()
 	{
+		TimerScript.running = false;
 		GlobalVariables.levelPassed = true;
 		if (!audio.isPlaying) {
 			audio.clip = winSound;
@@ -57,6 +58,7 @@ public class QuizQuestions : MonoBehaviour {
 	
 	private IEnumerator Lose()
 	{
+		TimerScript.running = false;
 		GlobalVariables.levelPassed = false;
 		if (!audio.isPlaying) {
 			audio.clip = loseSound;
@@ -72,11 +74,13 @@ public class QuizQuestions : MonoBehaviour {
 		questionStyle.font = myFont;
 		questionStyle.alignment = TextAnchor.MiddleCenter;
 		questionStyle.normal.textColor = Color.red;
-		
+		questionStyle.fontSize = 40;
+
 		GUIStyle buttonStyle = new GUIStyle();
 		buttonStyle.font = myFont;
 		buttonStyle.alignment = TextAnchor.MiddleCenter;
-		buttonStyle.normal.textColor = Color.white;
+		buttonStyle.normal.textColor = Color.red;
+		buttonStyle.fontSize = 35;
 
 		switch (question)
 		{
@@ -84,13 +88,13 @@ public class QuizQuestions : MonoBehaviour {
 		default:
 			GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "When did Singapore become independent?", questionStyle);
 			
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. 9 March 1954"))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. 9 March 1954", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. 3 April 1984"))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. 3 April 1984", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 9 August 1965"))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 9 August 1965", buttonStyle))
 				StartCoroutine(Win());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 16 November 1975"))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 16 November 1975", buttonStyle))
 				StartCoroutine(Lose());
 			break;
 

@@ -6,11 +6,13 @@ public class TimerScript : MonoBehaviour {
 	public float timeLeft;
 	public float timeMax;
 	public Material mat;
+	public static bool running;
 
 	Color sgRed;
 	Color sgBase;
 	// Use this for initialization
 	void Start () {
+		running = true;
 		timeLeft = timeMax;
 
 		sgRed.r = 240f / 255;
@@ -32,7 +34,8 @@ public class TimerScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		timeLeft -= Time.deltaTime;
+		if (running)
+			timeLeft -= Time.deltaTime;
 		if (timeLeft <= 0) {
 			timeLeft = 0;
 		}

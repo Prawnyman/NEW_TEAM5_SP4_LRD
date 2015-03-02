@@ -48,6 +48,7 @@ public class WW2LevelScript : MonoBehaviour {
 
 	private IEnumerator Win()
 	{
+		TimerScript.running = false;
 		GlobalVariables.levelPassed = true;
 		if (!this.audio.isPlaying) {
 			audio.clip = winSound;
@@ -59,6 +60,7 @@ public class WW2LevelScript : MonoBehaviour {
 	
 	private IEnumerator Lose()
 	{
+		TimerScript.running = false;
 		GlobalVariables.levelPassed = false;
 		if (!this.audio.isPlaying) {
 			audio.clip = loseSound;
