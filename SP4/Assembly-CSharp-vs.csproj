@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\0. Main Menu\GameMusicScript.cs" />
      <Compile Include="Assets\Scripts\0. Main Menu\PlayButton.cs" />
      <Compile Include="Assets\Scripts\01. Spray Water\FireObject.cs" />
      <Compile Include="Assets\Scripts\01. Spray Water\LevelInit.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Scripts\08. ERP Game\SpawnCarScript.cs" />
      <Compile Include="Assets\Scripts\0A. All Levels\GlobalVariables.cs" />
      <Compile Include="Assets\Scripts\0A. All Levels\InstructionText.cs" />
+     <Compile Include="Assets\Scripts\0A. All Levels\MusicManagerScript.cs" />
      <Compile Include="Assets\Scripts\0A. All Levels\TimerScript.cs" />
      <Compile Include="Assets\Scripts\0B. Level Transition\LevelTransition.cs" />
      <Compile Include="Assets\Scripts\0B. Level Transition\LivesManager.cs" />

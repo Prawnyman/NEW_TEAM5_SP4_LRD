@@ -56,8 +56,9 @@ public class GantryScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-		transform.position = SetPosition();
+		
+		Vector3 changeInPos = SetPosition() - transform.position;
+		transform.position += changeInPos * Time.deltaTime * 30;
 		
 		#if UNITY_EDITOR
 		if(Input.GetKeyDown("up") )

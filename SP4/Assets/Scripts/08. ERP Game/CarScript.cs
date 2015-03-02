@@ -17,6 +17,12 @@ public class CarScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	
+		if(audio.isPlaying == false)
+		{
+			audio.Play();
+		}
+		
 		transform.position += speed * Time.deltaTime;
 		
 		if(transform.position.x > 11)
