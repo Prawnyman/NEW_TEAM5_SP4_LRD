@@ -69,7 +69,7 @@ public class PlaneScript : MonoBehaviour {
 	}
 
 	void updateInitialRotation(){
-		if(this.transform.position.y > -1.5f){
+		if(this.transform.position.y > -2.4f){
 			if(Mathf.Abs(initialRotation - newInitialRotation) <= 0.75f){
 				initialRotation = newInitialRotation;
 				newInitialRotation = Random.Range(-35, 35);
