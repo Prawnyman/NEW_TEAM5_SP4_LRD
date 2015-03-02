@@ -26,8 +26,7 @@ public class RubbleLevel : MonoBehaviour
 		} else {
 			Instantiate (Picture2);
 		}
-		
-		for (int i =0; i<1; i++) {
+
 			x = Random.Range (-7, 0);
 			y = Random.Range (-4, 0);
 			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
@@ -47,9 +46,9 @@ public class RubbleLevel : MonoBehaviour
 			y = Random.Range (0, 4);
 			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
 			z++;
-		}
+
 		if (GlobalVariables.levelsPlayed <= 5) {
-			for (int i =1; i<GlobalVariables.levelsPlayed; i++) {
+			for (int i =1; i<(1+GlobalVariables.levelsPlayed*0.5F); i++) {
 				x = Random.Range (-7, 7);
 				y = Random.Range (-4, 4);
 				Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
