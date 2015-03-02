@@ -14,12 +14,8 @@ public class BombScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		spawnPrev = DiffupPrev = Time.time;
-		Timer = GameObject.FindGameObjectWithTag ("timer");
-		float difficulty = GlobalVariables.levelsPlayed * 50;
-		if (spawnDelay > 200) {
-			spawnDelay -= 50;
-		}
+		spawnPrev=DiffupPrev = Time.time;
+		Timer = GameObject.FindGameObjectWithTag("timer");
 	}
 	
 	// Update is called once per frame
