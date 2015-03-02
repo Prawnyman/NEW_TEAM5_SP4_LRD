@@ -7,9 +7,9 @@ public class LevelTransition : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GlobalVariables.levelsPlayed++;
-		nextLevel = UnityEngine.Random.Range (3, Application.levelCount);
+		nextLevel = UnityEngine.Random.Range (3, Application.levelCount - 1);
 		while (nextLevel == GlobalVariables.lastLevel) {
-			nextLevel = UnityEngine.Random.Range (3, Application.levelCount);
+			nextLevel = UnityEngine.Random.Range (3, Application.levelCount - 1);
 		}
 	}
 	
@@ -21,8 +21,13 @@ public class LevelTransition : MonoBehaviour {
 
 	private IEnumerator NextLevel() {
 		yield return new WaitForSeconds (2.0f);
+		if (GlobalVariables.questionLevel == true)
+			GlobalVariables.questionLevel = false;
 		if (GlobalVariables.lives > 0)
-			Application.LoadLevel (nextLevel);
+			if (GlobalVariables.levelsPlayed % 1 == 0)
+				Application.LoadLevel ("11. The Quiz");
+			else
+				Application.LoadLevel (nextLevel);
 		else
 			Application.LoadLevel ("0C. Game Over");
 	}
