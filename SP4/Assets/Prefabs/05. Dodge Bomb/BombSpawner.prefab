@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnType: {fileID: 196418, guid: 346d15bb0704bad40b0c18a7edcc8d15, type: 2}
   spawnCount: 1
-  spawnDelay: 300
+  spawnDelay: 450
   DiffupDelay: 500
 --- !u!1001 &100100000
 Prefab:

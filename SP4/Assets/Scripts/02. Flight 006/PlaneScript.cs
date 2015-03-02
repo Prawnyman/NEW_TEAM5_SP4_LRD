@@ -6,6 +6,7 @@ public class PlaneScript : MonoBehaviour {
 	private float finalRotation;
 	private bool touchedGround;
 	private float newInitialRotation;
+	private float speed = 0.5f * GlobalVariables.levelsPlayed;
 
 #if UNITY_EDITOR
 	private static float keyRotation = 0.0f;
@@ -68,17 +69,17 @@ public class PlaneScript : MonoBehaviour {
 	}
 
 	void updateInitialRotation(){
-		if(this.transform.position.y > -1.5f){
+		if(this.transform.position.y > -2.4f){
 			if(Mathf.Abs(initialRotation - newInitialRotation) <= 0.75f){
 				initialRotation = newInitialRotation;
 				newInitialRotation = Random.Range(-35, 35);
 			}
 			
 			if(newInitialRotation - initialRotation > 0){
-				initialRotation += 20.0f * Time.deltaTime;
+				initialRotation += 20.0f * Time.deltaTime * speed;
 			}
 			else if(newInitialRotation - initialRotation < 0){
-				initialRotation -= 20.0f * Time.deltaTime;
+				initialRotation -= 20.0f * Time.deltaTime * speed;
 			}
 		}
 	}
