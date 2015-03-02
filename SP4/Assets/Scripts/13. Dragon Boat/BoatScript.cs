@@ -19,6 +19,8 @@ public class BoatScript : MonoBehaviour {
 	
 	row currentRow;
 	
+	public GameObject arrow;
+	
 	// Use this for initialization
 	void Start () {
 		currentRow = row.Left;
@@ -41,6 +43,16 @@ public class BoatScript : MonoBehaviour {
 		if(speed.x < 0)
 		{
 			speed.x = 0;
+		}
+		
+		//arrow update
+		if(currentRow == row.Left)
+		{
+			arrow.transform.position = new Vector3(-5, 0, 0);
+		}
+		else if(currentRow == row.Right)
+		{
+			arrow.transform.position = new Vector3(5, 0, 0);
 		}
 		
 		#if UNITY_ANDROID

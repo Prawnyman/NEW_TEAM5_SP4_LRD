@@ -55,7 +55,7 @@ public class SpawnCarScript : MonoBehaviour {
 			{
 				SpawnCar(currentLane);
 			}
-			yield return new WaitForSeconds(Random.Range(0.25f, 0.75f));
+			yield return new WaitForSeconds(Random.Range(0.40f, 0.80f));
 		}
 	}
 	
