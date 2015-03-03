@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8be8d6fb5933a4b9dee748e5a9e1c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewMusic: {fileID: 8300000, guid: 4cbf1593a1d721c41b31d8ca0265e4fd, type: 3}
+  NewMusic: {fileID: 0}
   StopOnStart: 0
 --- !u!4 &1227150826
 Transform:
@@ -2374,14 +2374,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 11439140, guid: 1c9d26a412288d14581cece59fa000f6, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11439140, guid: 1c9d26a412288d14581cece59fa000f6, type: 2}
-      propertyPath: NewMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 4cbf1593a1d721c41b31d8ca0265e4fd, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c9d26a412288d14581cece59fa000f6, type: 2}
   m_RootGameObject: {fileID: 1227150824}
