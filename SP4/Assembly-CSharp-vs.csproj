@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\0C. Game Over\PlayButtonAlpha.cs" />
      <Compile Include="Assets\Scripts\10. FlappyAeroPlane\AeroPlane.cs" />
      <Compile Include="Assets\Scripts\10. FlappyAeroPlane\BackGroundReGenerate.cs" />
+     <Compile Include="Assets\Scripts\10. FlappyAeroPlane\Beginning.cs" />
      <Compile Include="Assets\Scripts\10. FlappyAeroPlane\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\10. FlappyAeroPlane\Obstacles.cs" />
      <Compile Include="Assets\Scripts\11. Quiz\QuizQuestions.cs" />

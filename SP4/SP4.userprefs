@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\0. Main Menu\GameMusicScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\10. FlappyAeroPlane\Beginning.cs">
     <Files>
-      <File FileName="Assets\Scripts\0. Main Menu\GameMusicScript.cs" Line="14" Column="28" />
-      <File FileName="Assets\Scripts\0A. All Levels\MusicManagerScript.cs" Line="58" Column="5" />
+      <File FileName="Assets\Scripts\10. FlappyAeroPlane\Beginning.cs" Line="24" Column="23" />
+      <File FileName="Assets\Scripts\10. FlappyAeroPlane\AeroPlane.cs" Line="76" Column="110" />
+      <File FileName="Assets\Scripts\02. Flight 006\Flight006Level.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\02. Flight 006\PlaneScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\05. Dodge Bomb\BombBeheavior.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
