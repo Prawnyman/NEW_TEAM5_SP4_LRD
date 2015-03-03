@@ -55,6 +55,7 @@ public class MusicManagerScript : MonoBehaviour {
 		gameMusic.volume = 0.0f;
 	}
 	public void EnableMusic(){
-		gameMusic.volume = 1.0f;
+		//gameMusic.volume = 1.0f;
+		gameMusic.volume = gameMusic.GetComponent<GameMusicScript>().MaxVolume;
 	}
 }

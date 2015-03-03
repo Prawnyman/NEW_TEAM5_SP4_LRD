@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class GameMusicScript : MonoBehaviour {
+	public float MaxVolume;
+
 	private static GameMusicScript instance = null;
 
 	public static GameMusicScript Instance {
@@ -9,6 +11,8 @@ public class GameMusicScript : MonoBehaviour {
 	}
 
 	void Awake() {
+		audio.volume = MaxVolume;
+
 		if (instance != null && instance != this) {
 			Destroy(this.gameObject);
 			return;
