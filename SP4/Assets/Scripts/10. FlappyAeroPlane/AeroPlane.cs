@@ -15,6 +15,8 @@ public class AeroPlane : MonoBehaviour
 	
 	GameObject Timer;
 	
+	Color color;
+	
 	private bool gameEnd = true;
 	
 	// Use this for initialization
@@ -23,6 +25,7 @@ public class AeroPlane : MonoBehaviour
 		GlobalVariables.lastLevel = Application.loadedLevel;
 		Timer = GameObject.FindGameObjectWithTag("timer");
 		TakeOff ();
+		color = renderer.material.color;
 	}
 	
 	// Update is called once per frame
@@ -74,6 +77,8 @@ public class AeroPlane : MonoBehaviour
 		if (gameEnd)
 		{
 			GameObject obj = Instantiate(explosion, gameObject.transform.position, Quaternion.identity) as GameObject;
+			color.a = 0;
+			renderer.material.color = color;
 			gameEnd = false;
 			StartCoroutine(Lose());
 		}

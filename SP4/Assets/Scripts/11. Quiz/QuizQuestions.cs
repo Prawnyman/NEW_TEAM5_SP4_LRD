@@ -36,13 +36,13 @@ public class QuizQuestions : MonoBehaviour {
 		questionStyle.font = myFont;
 		questionStyle.alignment = TextAnchor.MiddleCenter;
 		questionStyle.normal.textColor = Color.red;
-		questionStyle.fontSize = 40;
+		questionStyle.fontSize = 50;
 		
 		buttonStyle = new GUIStyle();
 		buttonStyle.font = myFont;
 		buttonStyle.alignment = TextAnchor.MiddleCenter;
 		buttonStyle.normal.textColor = Color.red;
-		buttonStyle.fontSize = 35;
+		buttonStyle.fontSize = 40;
 		
 		//correctStyle = new GUIStyle();
 	//	correctStyle = buttonStyle;
@@ -51,7 +51,7 @@ public class QuizQuestions : MonoBehaviour {
 		correctStyle.font = myFont;
 		correctStyle.alignment = TextAnchor.MiddleCenter;
 		correctStyle.normal.textColor = Color.red;
-		correctStyle.fontSize = 35;
+		correctStyle.fontSize = 40;
 	}
 
 	void OnGUI() {
@@ -95,6 +95,11 @@ public class QuizQuestions : MonoBehaviour {
 		Application.LoadLevel ("0B. Level Transition");
 	}
 
+	void DrawRectangle(int x, int y, int l, int b)
+	{
+
+	}
+
 	void CreateQuestion (int question)
 	{
 		if(!GlobalVariables.gamePaused){
@@ -102,132 +107,132 @@ public class QuizQuestions : MonoBehaviour {
 			{
 			case 1:
 			default:
-				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "When did Singapore become independent?", questionStyle);
+				GUI.TextArea(new Rect(startX, Screen.height * 0.2f, btn_length, btn_height), "When did Singapore become independent?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. 9 March 1954", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. 9 March 1954", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. 3 April 1984", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. 3 April 1984", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 9 August 1965", correctStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. 9 August 1965", correctStyle))
 					StartCoroutine(Win());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 16 November 1975", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 16 November 1975", buttonStyle))
 					StartCoroutine(Lose());
 				break;
 				
 			case 2:
-				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "What does Singapore mean?", questionStyle);
+				GUI.TextArea(new Rect(startX, Screen.height * 0.2f, btn_length, btn_height), "What does Singapore mean?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Garden City", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. Garden City", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Lion City", correctStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. Lion City", correctStyle))
 					StartCoroutine(Win());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Freetown", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. Freetown", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Yengema", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Yengema", buttonStyle))
 					StartCoroutine(Lose());
 				break;
 				
 			case 3:
-				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "Which is the currency of Singapore?", questionStyle);
+				GUI.TextArea(new Rect(startX, Screen.height * 0.2f, btn_length, btn_height), "Which is the currency of Singapore?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Dollar", correctStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. Dollar", correctStyle))
 					StartCoroutine(Win());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Lats", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. Lats", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Pound", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. Pound", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Baht", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Baht", buttonStyle))
 					StartCoroutine(Lose());
 				break;
 				
 			case 4:
 				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "What is the symbolism of crescent on Singapore's flag?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Growth of a young country", correctStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. Growth of a young country", correctStyle))
 					StartCoroutine(Win());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Islam", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. Islam", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Hinduism", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. Hinduism", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Judaism", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Judaism", buttonStyle))
 					StartCoroutine(Lose());
 				break;
 				
 			case 5:
 				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "Who was Singapore's first Prime Minister?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Tony Tan", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. Tony Tan", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Goh Chok Tong", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. Goh Chok Tong", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Lee Kuan Yew", correctStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. Lee Kuan Yew", correctStyle))
 					StartCoroutine(Win());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Ong Teng Cheong", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Ong Teng Cheong", buttonStyle))
 					StartCoroutine(Lose());
 				break;
 				
 			case 6:
 				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "Who is the current Prime Minister?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Tony Tan", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. Tony Tan", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Goh Chok Tong", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. Goh Chok Tong", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Lee Kuan Yew", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. Lee Kuan Yew", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Lee Hsien Loong", correctStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Lee Hsien Loong", correctStyle))
 					StartCoroutine(Win());
 				break;
 				
 			case 7:
 				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "What are the 3 main races of Singapore?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Caucasian, Chinese, Malay", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. Caucasian, Chinese, Malay", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Malay, Indian, Caucasian", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. Malay, Indian, Caucasian", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Chinese, Malay, Korean", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. Chinese, Malay, Korean", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Chinese, Malay, Indian", correctStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Chinese, Malay, Indian", correctStyle))
 					StartCoroutine(Win());
 				break;
 				
 			case 8:
 				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "When is the National Day of Singapore?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. 29th April", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. 29th April", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. 23rd March", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. 23rd March", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 9th August", correctStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. 9th August", correctStyle))
 					StartCoroutine(Win());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 8th August", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 8th August", buttonStyle))
 					StartCoroutine(Lose());
 				break;
 				
 			case 9:
 				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "How old will Singapore be in 2019?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. 50", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. 50", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. 54", correctStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. 54", correctStyle))
 					StartCoroutine(Win());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 55", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. 55", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 53", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 53", buttonStyle))
 					StartCoroutine(Lose());
 				break;
 				
 			case 10:
 				GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "What is Singapore's national language?", questionStyle);
 				
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. English", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "A. English", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Mandarin", buttonStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.3f, btn_length, btn_height), "B. Mandarin", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Tamil", buttonStyle))
+				if (GUI.Button(new Rect(startX - Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "C. Tamil", buttonStyle))
 					StartCoroutine(Lose());
-				if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Malay", correctStyle))
+				if (GUI.Button(new Rect(startX + Screen.width * 0.25f, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Malay", correctStyle))
 					StartCoroutine(Win());
 				break;
 			}

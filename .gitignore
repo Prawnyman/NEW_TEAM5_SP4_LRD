@@ -28,3 +28,6 @@ SP4/SP4.sln
 SP4/Assembly-UnityScript-firstpass.unityproj
 *.sln
 SP4/sg50.apk
+SP4/Assembly-CSharp.csproj
+*.sln
+SP4/SP4-csharp.sln

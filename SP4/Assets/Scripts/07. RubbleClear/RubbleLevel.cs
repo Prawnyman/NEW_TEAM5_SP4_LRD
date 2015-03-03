@@ -12,8 +12,7 @@ public class RubbleLevel : MonoBehaviour
 	private bool gameEnd = true;
 	private float x = 0;
 	private float y = 0;
-
-	private float difficulty = GlobalVariables.levelsPlayed * 0.5f;
+	private float difficulty = GlobalVariables.levelsPlayed;
 	// Use this for initialization
 	void Start ()
 	{
@@ -27,36 +26,28 @@ public class RubbleLevel : MonoBehaviour
 		} else {
 			Instantiate (Picture2);
 		}
-
-			x = Random.Range (-7, 0);
-			y = Random.Range (-4, 0);
-			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
-			z++;
-
-			x = Random.Range (-7, 0);
-			y = Random.Range (0, 4);
-			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
-			z++;
-
-			x = Random.Range (0, 7);
-			y = Random.Range (-4, 0);
-			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
-			z++;
-
-			x = Random.Range (0, 7);
-			y = Random.Range (0, 4);
-			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
-			z++;
-
-		if (GlobalVariables.levelsPlayed <= 5) {
-			for (int i =0; i< 1+((int)difficulty); i++) {
+		if ((int)difficulty < 3) {
+			for (int i =0; i<=3; i++) {
 				x = Random.Range (-7, 7);
 				y = Random.Range (-4, 4);
 				Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
 				z++;
 			}
+		} 
+		for (int i =0; i<((int)difficulty); i++) {
+			if( i <6)
+			{
+			x = Random.Range (-7, 7);
+			y = Random.Range (-4, 4);
+			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
+			z++;
+			}
 		}
+
+
+
 	}
+
 	
 	// Update is called once per frame
 	void Update ()
