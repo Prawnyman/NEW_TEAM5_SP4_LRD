@@ -26,7 +26,7 @@ public class BombScript : MonoBehaviour
 		float diff = (now - spawnPrev) * 1000;
 		float diff2 = (now - DiffupPrev) * 1000;
 
-		if ((diff2 > DiffupDelay)&&(spawnDelay>200)) {
+		if ((diff2 > DiffupDelay)&&(spawnDelay>100)) {
 			spawnDelay = spawnDelay - 20;
 			if (spawnDelay < 100)
 				spawnDelay = 100;
