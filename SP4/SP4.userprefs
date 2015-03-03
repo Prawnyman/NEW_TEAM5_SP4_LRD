@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\13. Dragon Boat\arrowScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Kamcord\ExampleScripts\RecordingGUI.cs">
     <Files>
-      <File FileName="Assets\Scripts\13. Dragon Boat\arrowScript.cs" Line="19" Column="31" />
-      <File FileName="Assets\Scripts\0A. All Levels\MusicManagerScript.cs" Line="11" Column="1" />
+      <File FileName="Assets\Kamcord\ExampleScripts\RecordingGUI.cs" Line="25" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

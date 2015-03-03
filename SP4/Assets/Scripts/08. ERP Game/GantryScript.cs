@@ -101,12 +101,11 @@ public class GantryScript : MonoBehaviour {
 				{
 					lp = touch.position;
 					yChange = lp.y - fp.y;
-					fp = touch.position;
 				}
 				
 				if(touch.phase == TouchPhase.Ended)
 				{
-					if(yChange > 100)
+					if(yChange > 0)
 					{
 						if(currentLane == Lanes.Mid)
 						{
@@ -117,7 +116,7 @@ public class GantryScript : MonoBehaviour {
 							currentLane = Lanes.Mid;
 						}
 					}
-					else if(yChange < -100)
+					else if(yChange < 0)
 					{
 						if(currentLane == Lanes.Mid)
 						{
@@ -128,6 +127,7 @@ public class GantryScript : MonoBehaviour {
 							currentLane = Lanes.Mid;
 						}
 					}
+					fp = touch.position;
 				}
 			}
 		}

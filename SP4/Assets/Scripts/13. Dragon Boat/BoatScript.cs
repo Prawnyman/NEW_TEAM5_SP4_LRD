@@ -11,6 +11,7 @@ public class BoatScript : MonoBehaviour {
 	private float timeLastRowed = -1.0f;
 	
 	private float yChange = 0.0f;
+	
 	private enum row
 	{
 		Left,
@@ -102,6 +103,9 @@ public class BoatScript : MonoBehaviour {
 						timeLastRowed = currentTime;
 						currentRow = row.Left;
 					}
+					
+					audio.Play();
+					
 				}
 			}
 		}
@@ -122,6 +126,7 @@ public class BoatScript : MonoBehaviour {
 				timeLastRowed = currentTime;
 				currentRow = row.Right;
 			}
+			audio.Play();
 		}
 		else if(Input.GetKeyDown("right"))
 		{
@@ -137,6 +142,7 @@ public class BoatScript : MonoBehaviour {
 				timeLastRowed = currentTime;
 				currentRow = row.Left;
 			}
+			audio.Play();
 		}
 		#endif
 		

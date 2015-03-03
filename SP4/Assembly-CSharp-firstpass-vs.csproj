@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{CB642618-F215-E5DE-4A45-BBF3A32203A0}</ProjectGuid>
+	<ProjectGuid>{9EFE5F5F-09A1-1EBD-8CB0-AB63D3E8460B}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,60 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\0. Main Menu\GameMusicScript.cs" />
-     <Compile Include="Assets\Scripts\0. Main Menu\PlayButton.cs" />
-     <Compile Include="Assets\Scripts\01. Spray Water\FireObject.cs" />
-     <Compile Include="Assets\Scripts\01. Spray Water\LevelInit.cs" />
-     <Compile Include="Assets\Scripts\01. Spray Water\TouchControl.cs" />
-     <Compile Include="Assets\Scripts\02. Flight 006\ExplosionAnimationScript.cs" />
-     <Compile Include="Assets\Scripts\02. Flight 006\Flight006Level.cs" />
-     <Compile Include="Assets\Scripts\02. Flight 006\PlaneScript.cs" />
-     <Compile Include="Assets\Scripts\05. Dodge Bomb\BombBeheavior.cs" />
-     <Compile Include="Assets\Scripts\05. Dodge Bomb\BombLevel.cs" />
-     <Compile Include="Assets\Scripts\05. Dodge Bomb\BombScript.cs" />
-     <Compile Include="Assets\Scripts\05. Dodge Bomb\Collision.cs" />
-     <Compile Include="Assets\Scripts\05. Dodge Bomb\PC_Control.cs" />
-     <Compile Include="Assets\Scripts\06. WW2 Sneaking\WW2CharacterScript.cs" />
-     <Compile Include="Assets\Scripts\06. WW2 Sneaking\WW2GuardScript.cs" />
-     <Compile Include="Assets\Scripts\06. WW2 Sneaking\WW2LevelScript.cs" />
-     <Compile Include="Assets\Scripts\07. RubbleClear\Crack.cs" />
-     <Compile Include="Assets\Scripts\07. RubbleClear\RubbleLevel.cs" />
-     <Compile Include="Assets\Scripts\08. ERP Game\CarScript.cs" />
-     <Compile Include="Assets\Scripts\08. ERP Game\ERPLevel.cs" />
-     <Compile Include="Assets\Scripts\08. ERP Game\GantryScript.cs" />
-     <Compile Include="Assets\Scripts\08. ERP Game\ParticleScript.cs" />
-     <Compile Include="Assets\Scripts\08. ERP Game\SpawnCarScript.cs" />
-     <Compile Include="Assets\Scripts\0A. All Levels\GlobalVariables.cs" />
-     <Compile Include="Assets\Scripts\0A. All Levels\InstructionText.cs" />
-     <Compile Include="Assets\Scripts\0A. All Levels\MusicManagerScript.cs" />
-     <Compile Include="Assets\Scripts\0A. All Levels\TimerScript.cs" />
-     <Compile Include="Assets\Scripts\0B. Level Transition\LevelTransition.cs" />
-     <Compile Include="Assets\Scripts\0B. Level Transition\LivesManager.cs" />
-     <Compile Include="Assets\Scripts\0B. Level Transition\ScoreManager.cs" />
-     <Compile Include="Assets\Scripts\0C. Game Over\GUIAlphaScript.cs" />
-     <Compile Include="Assets\Scripts\0C. Game Over\GameOverScoreScript.cs" />
-     <Compile Include="Assets\Scripts\0C. Game Over\PlayButtonAlpha.cs" />
-     <Compile Include="Assets\Scripts\10. FlappyAeroPlane\AeroPlane.cs" />
-     <Compile Include="Assets\Scripts\10. FlappyAeroPlane\BackGroundReGenerate.cs" />
-     <Compile Include="Assets\Scripts\10. FlappyAeroPlane\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\10. FlappyAeroPlane\Obstacles.cs" />
-     <Compile Include="Assets\Scripts\11. Quiz\GUIforQuiz.cs" />
-     <Compile Include="Assets\Scripts\13. Dragon Boat\BoatScript.cs" />
-     <Compile Include="Assets\Scripts\13. Dragon Boat\DragonBoatLevel.cs" />
-     <Compile Include="Assets\Scripts\13. Dragon Boat\arrowScript.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\2D - Double Tap\Scripts\DoubleTap_Sprite.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Button.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Panel.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\Input\Scripts\InputExample.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\Input\Scripts\InputExample_Ball.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\Layers\Scripts\Layers_Sprite.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\LongPress\Scripts\LongPress_Button.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\Pan\Scripts\Pan_Button.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\Pan\Scripts\Pan_Object.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\Tap_Breaker.cs" />
-     <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\Tap_Spawner.cs" />
-     <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Example.cs" />
-     <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Examples.cs" />
+     <Compile Include="Assets\Plugins\Kamcord\Kamcord.cs" />
+     <Compile Include="Assets\Plugins\Kamcord\KamcordAndroidPostRender.cs" />
+     <Compile Include="Assets\Plugins\Kamcord\KamcordAndroidPreRender.cs" />
+     <Compile Include="Assets\Plugins\Kamcord\KamcordAudioRecorder.cs" />
+     <Compile Include="Assets\Plugins\Kamcord\KamcordCallbackInterface.cs" />
+     <Compile Include="Assets\Plugins\Kamcord\KamcordJSON.cs" />
+     <Compile Include="Assets\Plugins\Kamcord\KamcordThumbnailUpdater.cs" />
+     <Compile Include="Assets\Plugins\Kamcord\Kamcord_Android.cs" />
+     <Compile Include="Assets\Plugins\Kamcord\Kamcord_IOS.cs" />
      <None Include="Assets\Plugins\Android\kamcord\res\drawable\kamcord_button_background_gray.xml" />
      <None Include="Assets\Plugins\Android\kamcord\res\drawable\kamcord_feed_item_background.xml" />
      <None Include="Assets\Plugins\Android\kamcord\res\values-sw350dp-land\kamcord_dimens.xml" />
@@ -213,12 +168,6 @@
  <Reference Include="TouchScript">
  <HintPath>C:/NEW_TEAM5_SP4_LRD/SP4/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{9EFE5F5F-09A1-1EBD-8CB0-AB63D3E8460B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{D3381E74-235C-0758-C204-6904598E2801}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
