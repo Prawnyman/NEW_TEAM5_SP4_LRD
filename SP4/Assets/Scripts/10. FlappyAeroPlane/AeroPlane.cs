@@ -44,7 +44,15 @@ public class AeroPlane : MonoBehaviour
 				//GameOver();
 			}	
 		}
-		
+
+		if (transform.position.y >= 2.9f)
+		{	
+			if (gameEnd) {
+			gameEnd = false;
+			StartCoroutine(Lose ());
+			}
+		}
+
 		if (Timer.GetComponent<TimerScript>().timeLeft <= 0)
 		{
 			if (gameEnd) {
