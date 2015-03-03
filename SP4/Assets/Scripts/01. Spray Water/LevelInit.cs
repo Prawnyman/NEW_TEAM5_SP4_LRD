@@ -15,6 +15,10 @@ public class LevelInit : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		if(difficulty > 4.0f)
+		{
+			difficulty = 4.0f;
+		}
 		GlobalVariables.lastLevel = Application.loadedLevel;
 		Timer = GameObject.FindGameObjectWithTag("timer");
 
@@ -27,6 +31,7 @@ public class LevelInit : MonoBehaviour {
 		
 	// Update is called once per frame
 	void Update () {
+		
 		if (Timer.GetComponent<TimerScript>().timeLeft <= 0)
 		{
 			if (noFireObj > 0){
