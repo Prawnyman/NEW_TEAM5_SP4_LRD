@@ -471,6 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5437b6e4a94854e49933b61c36b14b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxVolume: .5
 --- !u!4 &724241537
 Transform:
   m_ObjectHideFlags: 0
