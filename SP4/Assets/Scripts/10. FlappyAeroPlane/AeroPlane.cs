@@ -102,6 +102,7 @@ public class AeroPlane : MonoBehaviour
 	
 	private IEnumerator Lose()
 	{
+		TimerScript.running = false;
 		GlobalVariables.levelPassed = false;
 		if (!audio.isPlaying) {
 			audio.clip = loseSound;

@@ -13,6 +13,7 @@ public class RubbleLevel : MonoBehaviour
 	private float x = 0;
 	private float y = 0;
 
+	private float difficulty = GlobalVariables.levelsPlayed * 0.5f;
 	// Use this for initialization
 	void Start ()
 	{
@@ -48,7 +49,7 @@ public class RubbleLevel : MonoBehaviour
 			z++;
 
 		if (GlobalVariables.levelsPlayed <= 5) {
-			for (int i =1; i<(1+GlobalVariables.levelsPlayed*0.5F); i++) {
+			for (int i =0; i< 1+((int)difficulty); i++) {
 				x = Random.Range (-7, 7);
 				y = Random.Range (-4, 4);
 				Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
@@ -77,6 +78,7 @@ public class RubbleLevel : MonoBehaviour
 
 	private IEnumerator Win ()
 	{
+		TimerScript.running = false;
 		GlobalVariables.levelPassed = true;
 		if (!audio.isPlaying) {
 			audio.clip = winSound;

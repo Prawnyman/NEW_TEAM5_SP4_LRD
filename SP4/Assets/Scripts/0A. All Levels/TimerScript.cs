@@ -6,11 +6,13 @@ public class TimerScript : MonoBehaviour {
 	public float timeLeft;
 	public float timeMax;
 	public Material mat;
+	public static bool running;
 
 	Color sgRed;
 	Color sgBase;
 	// Use this for initialization
 	void Start () {
+		running = true;
 		timeLeft = timeMax;
 
 		sgRed.r = 240f / 255;
@@ -21,7 +23,7 @@ public class TimerScript : MonoBehaviour {
 		sgBase = sgRed;
 		sgBase.a = 0.1f;
 	}
-	/*
+
 	void DrawQuad(Rect position, Color color) {
 		Texture2D texture = new Texture2D(1, 1);
 		texture.SetPixel(0,0,color);
@@ -29,20 +31,11 @@ public class TimerScript : MonoBehaviour {
 		GUI.skin.box.normal.background = texture;
 		GUI.Box(position, GUIContent.none);
 	}
-*/
-	void DrawQuad(Rect position, Color color) {
-		Texture2D texture = new Texture2D(1, 1);
-		texture.SetPixel(0,0,color);
-		texture.Apply();
-		GUI.skin.box.normal.background = texture;
-		GUI.Box(position, GUIContent.none);
-	}
-
-
 
 	// Update is called once per frame
 	void Update () {
-		timeLeft -= Time.deltaTime;
+		if (running)
+			timeLeft -= Time.deltaTime;
 		if (timeLeft <= 0) {
 			timeLeft = 0;
 		}

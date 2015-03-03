@@ -9,7 +9,8 @@ public class LivesManager : MonoBehaviour {
 
 	public GameObject[] hearts;
 
-	void Start () {
+	void Start () 
+	{
 		for (int i = 0; i < 5; i++)
 		{
 			GameObject HeartObject = GameObject.Instantiate (Heart) as GameObject;
@@ -23,20 +24,30 @@ public class LivesManager : MonoBehaviour {
 
 		}
 		
-		if (GlobalVariables.levelPassed == false) {
+		if (GlobalVariables.levelPassed == false && GlobalVariables.questionLevel == false) {
 			GlobalVariables.lives--;
-			Debug.Log("Lose " + GlobalVariables.lastLevel);
+		}
+		else if (GlobalVariables.levelPassed == true && GlobalVariables.questionLevel == true && GlobalVariables.lives < 5) {
+			GlobalVariables.lives++;
 		}
 	}
 
-	void Update () {
+	void Update () 
+	{
 		hearts = GameObject.FindGameObjectsWithTag ("heart");
 
-		if (GlobalVariables.levelPassed == false) 
+		if (GlobalVariables.levelPassed == false && GlobalVariables.questionLevel == false) 
 		{
 			Vector4 col = hearts[GlobalVariables.lives].renderer.material.color;
 			col.x -= 0.02f;
 			hearts[GlobalVariables.lives].renderer.material.color = col;
+		}
+		else if (GlobalVariables.levelPassed == true && GlobalVariables.questionLevel == true && GlobalVariables.lives <= 5) 
+		{
+			Vector4 col = hearts[GlobalVariables.lives-1].renderer.material.color;
+			if (col.x < 1)
+				col.x += 0.02f;
+			hearts[GlobalVariables.lives-1].renderer.material.color = col;
 		}
 	}
 }

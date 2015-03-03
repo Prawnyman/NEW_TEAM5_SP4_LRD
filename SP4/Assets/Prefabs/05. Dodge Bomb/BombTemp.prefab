@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 496418}
   - 212: {fileID: 21296418}
-  - 50: {fileID: 5039004}
   - 60: {fileID: 6012528}
   - 114: {fileID: 11454508}
+  - 50: {fileID: 5059790}
   m_Layer: 0
   m_Name: BombTemp
   m_TagString: Bomb
@@ -31,7 +31,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5039004
+--- !u!50 &5059790
 Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -40,8 +40,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 1
+  m_GravityScale: 0
+  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
