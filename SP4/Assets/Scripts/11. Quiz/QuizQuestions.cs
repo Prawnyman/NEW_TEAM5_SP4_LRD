@@ -161,7 +161,7 @@ public class QuizQuestions : MonoBehaviour {
 				StartCoroutine(Lose());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Lee Kuan Yew", correctStyle))
 				StartCoroutine(Win());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Ong Teng Cheongi", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Ong Teng Cheong", buttonStyle))
 				StartCoroutine(Lose());
 			break;
 
