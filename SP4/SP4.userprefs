@@ -1,17 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\0A. All Levels\MusicManagerScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\11. Quiz\QuizQuestions.cs">
     <Files>
-      <File FileName="Assets\Scripts\10. FlappyAeroPlane\BackGroundReGenerate.cs" Line="16" Column="1" />
-      <File FileName="Assets\Scripts\10. FlappyAeroPlane\Obstacles.cs" Line="19" Column="2" />
-      <File FileName="Assets\Scripts\10. FlappyAeroPlane\AeroPlane.cs" Line="117" Column="1" />
-      <File FileName="Assets\Scripts\0A. All Levels\MusicManagerScript.cs" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\11. Quiz\QuizQuestions.cs" Line="220" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\Users\user\Desktop\NEW_TEAM5_SP4_LRD\SP4\Assets\Scripts\10. FlappyAeroPlane\AeroPlane.cs" line="116" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
