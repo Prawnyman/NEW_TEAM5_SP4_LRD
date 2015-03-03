@@ -4,7 +4,7 @@ using System.Collections;
 public class arrowScript : MonoBehaviour {
 	
 	public GameObject arrow;
-	Color color;
+	static public Color color;
 	
 	private bool changeA = false;
 	
@@ -26,11 +26,11 @@ public class arrowScript : MonoBehaviour {
 		
 		if(changeA == true)
 		{
-			color.a += Time.deltaTime;
+			color.a += 0.02f;
 		}
 		else if (changeA == false)
 		{
-			color.a -= Time.deltaTime;
+			color.a -= 0.02f;
 		}
 		
 		arrow.renderer.material.color = color;

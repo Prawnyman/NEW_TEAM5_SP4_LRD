@@ -24,7 +24,7 @@ public class LevelTransition : MonoBehaviour {
 		if (GlobalVariables.questionLevel == true)
 			GlobalVariables.questionLevel = false;
 		if (GlobalVariables.lives > 0)
-			if (GlobalVariables.levelsPlayed % 5 == 0)
+			if (GlobalVariables.levelsPlayed % 1 == 0)
 				Application.LoadLevel ("11. The Quiz");
 			else
 				Application.LoadLevel (nextLevel);
