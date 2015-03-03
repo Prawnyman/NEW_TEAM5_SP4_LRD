@@ -31,7 +31,7 @@ public class PlaneScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!touchedGround){
+		if(!touchedGround && !GlobalVariables.gamePaused){
 			updateInitialRotation();
 
 #if UNITY_ANDROID

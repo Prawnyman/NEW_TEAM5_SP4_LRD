@@ -35,120 +35,121 @@ public class BoatScript : MonoBehaviour {
 		float currentTime = Time.time;
 		
 		transform.position += speed * Time.deltaTime;
-		
-		if(speed.x > 0)
-		{
-			speed.x -= 0.03f;
-		}
-		
-		if(speed.x < 0)
-		{
-			speed.x = 0;
-		}
-		
-		//arrow update
-		if(currentRow == row.Left)
-		{
-			arrow.transform.position = new Vector3(-5, 0, 0);
-		}
-		else if(currentRow == row.Right)
-		{
-			arrow.transform.position = new Vector3(5, 0, 0);
-		}
-		
-		#if UNITY_ANDROID
-		if(Input.touches.Length > 0)
-		{
-			if(Input.touchCount == 1)
+
+		if(!GlobalVariables.gamePaused){
+			if(speed.x > 0)
 			{
-				Touch touch = Input.GetTouch(0);
-				
-				if(touch.phase == TouchPhase.Began)
-				{
-					fp = touch.position;
-					lp = touch.position;
-				}
-				if(touch.phase == TouchPhase.Moved)
-				{
-					lp = touch.position;
-					yChange = lp.y - fp.y;
-					fp = touch.position;
-				}
-				if(touch.phase == TouchPhase.Ended && currentRow == row.Left)
-				{
-					if(yChange < 0 && fp.x < Screen.width / 2 && lp.x < Screen.width / 2)
-					{
-						if(currentTime - timeLastRowed > 0.15f){
-							speed.x = maxSpeed;
-						}
-						else{
-							speed.x  = speed.x * 0.75f;
-						}
-						
-						timeLastRowed = currentTime;
-						currentRow = row.Right;
-						arrowScript.color.a = 1;
-					}
-				}
-				if(touch.phase == TouchPhase.Ended && currentRow == row.Right)
-				{
-					if(yChange < 0 && fp.x > Screen.width / 2 && lp.x > Screen.width / 2)
-					{
-						if(currentTime - timeLastRowed > 0.15f){
-							speed.x = maxSpeed;
-						}
-						else{
-							speed.x = speed.x * 0.75f;
-						}
-						
-						timeLastRowed = currentTime;
-						currentRow = row.Left;
-						arrowScript.color.a = 1;
-					}
-					
-					audio.Play();
-					
-				}
+				speed.x -= 0.03f;
 			}
-		}
-		#endif
-		
-		#if UNITY_EDITOR
-		if(Input.GetKeyDown("left"))
-		{
+			
+			if(speed.x < 0)
+			{
+				speed.x = 0;
+			}
+			
+			//arrow update
 			if(currentRow == row.Left)
 			{
-				if(currentTime - timeLastRowed > 0.15f){
-					speed.x = maxSpeed;
-				}
-				else{
-					speed.x = speed.x * 0.75f;
-				}	
-				
-				timeLastRowed = currentTime;
-				currentRow = row.Right;
-				arrowScript.color.a = 1;
+				arrow.transform.position = new Vector3(-5, 0, 0);
 			}
-			audio.Play();
-		}
-		else if(Input.GetKeyDown("right"))
-		{
-			if(currentRow == row.Right && currentTime - timeLastRowed > 0.5f)
+			else if(currentRow == row.Right)
 			{
-				if(currentTime - timeLastRowed > 0.15f){
-					speed.x = maxSpeed;
-				}
-				else{
-					speed.x = speed.x * 0.75f;
-				}
-				
-				timeLastRowed = currentTime;
-				currentRow = row.Left;
-				arrowScript.color.a = 1;
+				arrow.transform.position = new Vector3(5, 0, 0);
 			}
-			audio.Play();
+			
+			#if UNITY_ANDROID
+			if(Input.touches.Length > 0)
+			{
+				if(Input.touchCount == 1)
+				{
+					Touch touch = Input.GetTouch(0);
+					
+					if(touch.phase == TouchPhase.Began)
+					{
+						fp = touch.position;
+						lp = touch.position;
+					}
+					if(touch.phase == TouchPhase.Moved)
+					{
+						lp = touch.position;
+						yChange = lp.y - fp.y;
+						fp = touch.position;
+					}
+					if(touch.phase == TouchPhase.Ended && currentRow == row.Left)
+					{
+						if(yChange < 0 && fp.x < Screen.width / 2 && lp.x < Screen.width / 2)
+						{
+							if(currentTime - timeLastRowed > 0.15f){
+								speed.x = maxSpeed;
+							}
+							else{
+								speed.x  = speed.x * 0.75f;
+							}
+							
+							timeLastRowed = currentTime;
+							currentRow = row.Right;
+							arrowScript.color.a = 1;
+						}
+					}
+					if(touch.phase == TouchPhase.Ended && currentRow == row.Right)
+					{
+						if(yChange < 0 && fp.x > Screen.width / 2 && lp.x > Screen.width / 2)
+						{
+							if(currentTime - timeLastRowed > 0.15f){
+								speed.x = maxSpeed;
+							}
+							else{
+								speed.x = speed.x * 0.75f;
+							}
+							
+							timeLastRowed = currentTime;
+							currentRow = row.Left;
+							arrowScript.color.a = 1;
+						}
+						
+						audio.Play();
+						
+					}
+				}
+			}
+			#endif
+			
+			#if UNITY_EDITOR
+			if(Input.GetKeyDown("left"))
+			{
+				if(currentRow == row.Left)
+				{
+					if(currentTime - timeLastRowed > 0.15f){
+						speed.x = maxSpeed;
+					}
+					else{
+						speed.x = speed.x * 0.75f;
+					}	
+					
+					timeLastRowed = currentTime;
+					currentRow = row.Right;
+					arrowScript.color.a = 1;
+				}
+				audio.Play();
+			}
+			else if(Input.GetKeyDown("right"))
+			{
+				if(currentRow == row.Right && currentTime - timeLastRowed > 0.5f)
+				{
+					if(currentTime - timeLastRowed > 0.15f){
+						speed.x = maxSpeed;
+					}
+					else{
+						speed.x = speed.x * 0.75f;
+					}
+					
+					timeLastRowed = currentTime;
+					currentRow = row.Left;
+					arrowScript.color.a = 1;
+				}
+				audio.Play();
+			}
+			#endif
 		}
-		#endif
-		
 	}
 }

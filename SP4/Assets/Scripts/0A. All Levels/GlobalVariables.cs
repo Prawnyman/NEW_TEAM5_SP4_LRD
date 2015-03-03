@@ -10,6 +10,7 @@ public class GlobalVariables : MonoBehaviour {
 	static public int levelsPlayed = 0;
 	static public bool questionLevel = false;
 	static public bool soundEnabled = true;
+	static public bool gamePaused = false;
 	
 	// Use this for initialization
 	void Start () {

@@ -32,7 +32,9 @@ public class Crack : MonoBehaviour {
 	}
 void OnMouseDown()
 	{
-		ChangeSprite ();
+		if(!GlobalVariables.gamePaused){
+			ChangeSprite ();
+		}
 	}
 void ChangeSprite()
 {

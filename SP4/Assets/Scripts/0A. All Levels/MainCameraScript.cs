@@ -15,5 +15,12 @@ public class MainCameraScript : MonoBehaviour {
 		else if(!GlobalVariables.soundEnabled && AudioListener.volume > 0.0f){
 			AudioListener.volume = 0.0f;
 		}
+
+		if(GlobalVariables.gamePaused){
+
+		}
+		else{
+
+		}
 	}
 }

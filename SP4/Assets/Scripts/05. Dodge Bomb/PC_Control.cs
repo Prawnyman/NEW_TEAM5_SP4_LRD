@@ -13,12 +13,13 @@ public class PC_Control : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Timer.GetComponent<TimerScript>().timeLeft > 0)
-		{
-			#if UNITY_ANDROID
+		if(!GlobalVariables.gamePaused){
+			if (Timer.GetComponent<TimerScript>().timeLeft > 0)
+			{
+				#if UNITY_ANDROID
 				dir.x = Input.acceleration.x * moveSpeed;
-					transform.Translate (dir.x, 0, 0);
-			#endif
+				transform.Translate (dir.x, 0, 0);
+				#endif
 				if (Input.GetKey (KeyCode.RightArrow)) {
 					dir.x = 0.5f* moveSpeed;
 					transform.Translate (dir.x, 0, 0);
@@ -28,6 +29,7 @@ public class PC_Control : MonoBehaviour {
 					dir.x = -0.5f* moveSpeed;
 					transform.Translate (dir.x, 0, 0);
 				}
+			}
 		}
 	}//update
 }

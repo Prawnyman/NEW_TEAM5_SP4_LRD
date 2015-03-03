@@ -59,78 +59,80 @@ public class GantryScript : MonoBehaviour {
 		
 		Vector3 changeInPos = SetPosition() - transform.position;
 		transform.position += changeInPos * Time.deltaTime * 30;
-		
-		#if UNITY_EDITOR
-		if(Input.GetKeyDown("up") )
-		{
-			if(currentLane == Lanes.Mid)
+
+		if(!GlobalVariables.gamePaused){
+			#if UNITY_EDITOR
+			if(Input.GetKeyDown("up") )
 			{
-				currentLane = Lanes.Top;
-			}
-			if(currentLane == Lanes.Btm)
-			{
-				currentLane = Lanes.Mid;
-			}
-		}
-		if(Input.GetKeyDown("down"))
-		{
-			if(currentLane == Lanes.Mid)
-			{
-				currentLane = Lanes.Btm;
-			}
-			if(currentLane == Lanes.Top)
-			{
-				currentLane = Lanes.Mid;
-			}
-		}
-		#endif	
-		
-		#if UNITY_ANDROID
-		if(Input.touches.Length > 0)
-		{
-			if(Input.touchCount == 1)
-			{
-				Touch touch = Input.GetTouch(0);
-				
-				if(touch.phase == TouchPhase.Began)
+				if(currentLane == Lanes.Mid)
 				{
-					fp = touch.position;
-					lp = touch.position;
+					currentLane = Lanes.Top;
 				}
-				if(touch.phase == TouchPhase.Moved)
+				if(currentLane == Lanes.Btm)
 				{
-					lp = touch.position;
-					yChange = lp.y - fp.y;
+					currentLane = Lanes.Mid;
 				}
-				
-				if(touch.phase == TouchPhase.Ended)
+			}
+			if(Input.GetKeyDown("down"))
+			{
+				if(currentLane == Lanes.Mid)
 				{
-					if(yChange > 0)
+					currentLane = Lanes.Btm;
+				}
+				if(currentLane == Lanes.Top)
+				{
+					currentLane = Lanes.Mid;
+				}
+			}
+			#endif	
+			
+			#if UNITY_ANDROID
+			if(Input.touches.Length > 0)
+			{
+				if(Input.touchCount == 1)
+				{
+					Touch touch = Input.GetTouch(0);
+					
+					if(touch.phase == TouchPhase.Began)
 					{
-						if(currentLane == Lanes.Mid)
-						{
-							currentLane = Lanes.Top;
-						}
-						else if(currentLane == Lanes.Btm)
-						{
-							currentLane = Lanes.Mid;
-						}
+						fp = touch.position;
+						lp = touch.position;
 					}
-					else if(yChange < 0)
+					if(touch.phase == TouchPhase.Moved)
 					{
-						if(currentLane == Lanes.Mid)
-						{
-							currentLane = Lanes.Btm;
-						}
-						else if(currentLane == Lanes.Top)
-						{
-							currentLane = Lanes.Mid;
-						}
+						lp = touch.position;
+						yChange = lp.y - fp.y;
 					}
-					fp = touch.position;
+					
+					if(touch.phase == TouchPhase.Ended)
+					{
+						if(yChange > 0)
+						{
+							if(currentLane == Lanes.Mid)
+							{
+								currentLane = Lanes.Top;
+							}
+							else if(currentLane == Lanes.Btm)
+							{
+								currentLane = Lanes.Mid;
+							}
+						}
+						else if(yChange < 0)
+						{
+							if(currentLane == Lanes.Mid)
+							{
+								currentLane = Lanes.Btm;
+							}
+							else if(currentLane == Lanes.Top)
+							{
+								currentLane = Lanes.Mid;
+							}
+						}
+						fp = touch.position;
+					}
 				}
 			}
+			#endif
 		}
-		#endif
 	}
 }

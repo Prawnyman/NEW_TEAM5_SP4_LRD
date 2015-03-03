@@ -28,7 +28,7 @@ public class AeroPlane : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{	
-		if (gameEnd)
+		if (gameEnd && !GlobalVariables.gamePaused)
 		{
 			if (Input.GetKeyUp ("space") || Input.touchCount > 0)
 			{
