@@ -87,6 +87,7 @@ public class BoatScript : MonoBehaviour {
 						
 						timeLastRowed = currentTime;
 						currentRow = row.Right;
+						arrowScript.color.a = 1;
 					}
 				}
 				if(touch.phase == TouchPhase.Ended && currentRow == row.Right)
@@ -102,6 +103,7 @@ public class BoatScript : MonoBehaviour {
 						
 						timeLastRowed = currentTime;
 						currentRow = row.Left;
+						arrowScript.color.a = 1;
 					}
 					
 					audio.Play();
@@ -125,6 +127,7 @@ public class BoatScript : MonoBehaviour {
 				
 				timeLastRowed = currentTime;
 				currentRow = row.Right;
+				arrowScript.color.a = 1;
 			}
 			audio.Play();
 		}
@@ -141,6 +144,7 @@ public class BoatScript : MonoBehaviour {
 				
 				timeLastRowed = currentTime;
 				currentRow = row.Left;
+				arrowScript.color.a = 1;
 			}
 			audio.Play();
 		}

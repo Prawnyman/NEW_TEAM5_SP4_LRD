@@ -9,7 +9,7 @@ public class BackGroundReGenerate : MonoBehaviour
 		//Debug.Log ("Triggered: " + collider.name);
 		float WidthOfBGObject =((BoxCollider2D)collider).size.x;
 		Vector3 pos = collider.transform.position;
-		pos.x += WidthOfBGObject * NumOfS - WidthOfBGObject/10.0f;
+		pos.x += (WidthOfBGObject * NumOfS) - (WidthOfBGObject/10.0f);
 		collider.transform.position = pos;
 	}
 }
