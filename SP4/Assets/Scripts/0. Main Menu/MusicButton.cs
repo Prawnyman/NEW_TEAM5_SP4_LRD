@@ -12,14 +12,15 @@ public class MusicButton : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
 		if(GlobalVariables.soundEnabled)
 			spriteRenderer.sprite = music_enabled;
 		else
 			spriteRenderer.sprite = music_disabled;
+	}
+	
+	// Update is called once per frame
+	void Update () {
 	}
 	
 	private void OnEnable()
@@ -37,5 +38,10 @@ public class MusicButton : MonoBehaviour {
 	private void tappedHandler(object sender, EventArgs e)
 	{
 		GlobalVariables.soundEnabled = !GlobalVariables.soundEnabled;
+		
+		if(GlobalVariables.soundEnabled)
+			spriteRenderer.sprite = music_enabled;
+		else
+			spriteRenderer.sprite = music_disabled;
 	}
 }

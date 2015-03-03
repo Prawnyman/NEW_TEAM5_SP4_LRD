@@ -48,7 +48,7 @@ TextureImporter:
     - name: music_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
         width: 256
         height: 256
@@ -58,7 +58,7 @@ TextureImporter:
     - name: music_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 271
         y: 0
         width: 256
         height: 256
