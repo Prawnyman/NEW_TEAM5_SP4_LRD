@@ -41,7 +41,7 @@ public class BombScript : MonoBehaviour
 
 		for (int i=0; i<spawnCount; i++) {
 			float x = Random.Range (-12, 12);
-			float y = Random.Range (7, 9);
+			float y =12;
 
 			Instantiate (spawnType, new Vector3 (x, y, 0), Quaternion.identity);
 		}
