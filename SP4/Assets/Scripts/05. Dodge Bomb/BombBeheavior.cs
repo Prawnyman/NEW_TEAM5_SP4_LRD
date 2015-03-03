@@ -9,7 +9,7 @@ public class BombBeheavior : MonoBehaviour {
 
 	void Start()
 	{
-		speed = new Vector3(0, -10.0f - difficulty, 0);
+		speed = new Vector3(0, -15.0f - difficulty, 0);
 		Timer = GameObject.FindGameObjectWithTag("timer");
 	}
 
