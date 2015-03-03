@@ -16,6 +16,10 @@ public class QuizQuestions : MonoBehaviour {
 
 	static public bool lose = false;
 
+	GUIStyle questionStyle;
+	GUIStyle buttonStyle;
+	GUIStyle correctStyle;
+
 	void Start ()
 	{
 		GlobalVariables.questionLevel = true;
@@ -27,6 +31,27 @@ public class QuizQuestions : MonoBehaviour {
 		btn_length = Screen.width * 0.4f;
 		btn_height = Screen.height * 0.1f;
 		question = Random.Range(1, 10);
+
+		questionStyle = new GUIStyle();
+		questionStyle.font = myFont;
+		questionStyle.alignment = TextAnchor.MiddleCenter;
+		questionStyle.normal.textColor = Color.red;
+		questionStyle.fontSize = 40;
+		
+		buttonStyle = new GUIStyle();
+		buttonStyle.font = myFont;
+		buttonStyle.alignment = TextAnchor.MiddleCenter;
+		buttonStyle.normal.textColor = Color.red;
+		buttonStyle.fontSize = 35;
+		
+		//correctStyle = new GUIStyle();
+	//	correctStyle = buttonStyle;
+
+		correctStyle = new GUIStyle();
+		correctStyle.font = myFont;
+		correctStyle.alignment = TextAnchor.MiddleCenter;
+		correctStyle.normal.textColor = Color.red;
+		correctStyle.fontSize = 35;
 	}
 
 	void OnGUI() {
@@ -46,6 +71,7 @@ public class QuizQuestions : MonoBehaviour {
 
 	private IEnumerator Win()
 	{
+		correctStyle.normal.textColor = Color.green;
 		TimerScript.running = false;
 		GlobalVariables.levelPassed = true;
 		if (!audio.isPlaying) {
@@ -58,6 +84,7 @@ public class QuizQuestions : MonoBehaviour {
 	
 	private IEnumerator Lose()
 	{
+		correctStyle.normal.textColor = Color.green;
 		TimerScript.running = false;
 		GlobalVariables.levelPassed = false;
 		if (!audio.isPlaying) {
@@ -70,18 +97,6 @@ public class QuizQuestions : MonoBehaviour {
 
 	void CreateQuestion (int question)
 	{
-		GUIStyle questionStyle = new GUIStyle();
-		questionStyle.font = myFont;
-		questionStyle.alignment = TextAnchor.MiddleCenter;
-		questionStyle.normal.textColor = Color.red;
-		questionStyle.fontSize = 40;
-
-		GUIStyle buttonStyle = new GUIStyle();
-		buttonStyle.font = myFont;
-		buttonStyle.alignment = TextAnchor.MiddleCenter;
-		buttonStyle.normal.textColor = Color.red;
-		buttonStyle.fontSize = 35;
-
 		switch (question)
 		{
 		case 1:
@@ -92,7 +107,7 @@ public class QuizQuestions : MonoBehaviour {
 				StartCoroutine(Lose());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. 3 April 1984", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 9 August 1965", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 9 August 1965", correctStyle))
 				StartCoroutine(Win());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 16 November 1975", buttonStyle))
 				StartCoroutine(Lose());
@@ -103,7 +118,7 @@ public class QuizQuestions : MonoBehaviour {
 			
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Garden City", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Lion City", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Lion City", correctStyle))
 				StartCoroutine(Win());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Freetown", buttonStyle))
 				StartCoroutine(Lose());
@@ -114,7 +129,7 @@ public class QuizQuestions : MonoBehaviour {
 		case 3:
 			GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "Which is the currency of Singapore?", questionStyle);
 			
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Dollar", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Dollar", correctStyle))
 				StartCoroutine(Win());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Lats", buttonStyle))
 				StartCoroutine(Lose());
@@ -127,7 +142,7 @@ public class QuizQuestions : MonoBehaviour {
 		case 4:
 			GUI.TextArea(new Rect(startX, Screen.height * 0.05f, btn_length, btn_height), "What is the symbolism of crescent on Singapore's flag?", questionStyle);
 			
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Growth of a young country", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. Growth of a young country", correctStyle))
 				StartCoroutine(Win());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Islam", buttonStyle))
 				StartCoroutine(Lose());
@@ -144,9 +159,9 @@ public class QuizQuestions : MonoBehaviour {
 				StartCoroutine(Lose());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. Goh Chok Tong", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Lee Kuan Yew", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Lee Kuan Yew", correctStyle))
 				StartCoroutine(Win());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Ong Teng Cheongi", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Ong Teng Cheong", buttonStyle))
 				StartCoroutine(Lose());
 			break;
 
@@ -159,7 +174,7 @@ public class QuizQuestions : MonoBehaviour {
 				StartCoroutine(Lose());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Lee Kuan Yew", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Lee Hsien Loong", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Lee Hsien Loong", correctStyle))
 				StartCoroutine(Win());
 			break;
 
@@ -172,7 +187,7 @@ public class QuizQuestions : MonoBehaviour {
 				StartCoroutine(Lose());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Chinese, Malay, Korean", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Chinese, Malay, Indian", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Chinese, Malay, Indian", correctStyle))
 				StartCoroutine(Win());
 			break;
 
@@ -183,7 +198,7 @@ public class QuizQuestions : MonoBehaviour {
 				StartCoroutine(Lose());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. 23rd March", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 9th August", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 9th August", correctStyle))
 				StartCoroutine(Win());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. 8th August", buttonStyle))
 				StartCoroutine(Lose());
@@ -194,7 +209,7 @@ public class QuizQuestions : MonoBehaviour {
 			
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.0f, btn_length, btn_height), "A. 50", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. 54", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.2f, btn_length, btn_height), "B. 54", correctStyle))
 				StartCoroutine(Win());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. 55", buttonStyle))
 				StartCoroutine(Lose());
@@ -211,7 +226,7 @@ public class QuizQuestions : MonoBehaviour {
 				StartCoroutine(Lose());
 			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.4f, btn_length, btn_height), "C. Tamil", buttonStyle))
 				StartCoroutine(Lose());
-			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Malay", buttonStyle))
+			if (GUI.Button(new Rect(startX, startY + Screen.height * 0.6f, btn_length, btn_height), "D. Malay", correctStyle))
 				StartCoroutine(Win());
 			break;
 		}

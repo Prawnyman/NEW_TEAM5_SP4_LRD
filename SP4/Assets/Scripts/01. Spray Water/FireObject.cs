@@ -7,7 +7,7 @@ public class FireObject : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		hp = 10;
+		hp = 5;
 	}			
 	// Update is called once per frame
 	

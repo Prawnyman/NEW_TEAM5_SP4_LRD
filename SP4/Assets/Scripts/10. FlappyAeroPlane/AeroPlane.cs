@@ -6,14 +6,16 @@ public class AeroPlane : MonoBehaviour
 	public float FlySpeed = 1.0f;
 	public Vector2 jumpForce = new Vector2(0, 300);
 	//Vector3 velocity = Vector3.zero;
-	
-	
+
 	public AudioClip winSound;
 	public AudioClip loseSound;
 	public AudioClip takeoff;
 	public AudioClip jump;
+	public GameObject explosion;
 	
 	GameObject Timer;
+	
+	Color color;
 	
 	private bool gameEnd = true;
 	
@@ -23,11 +25,12 @@ public class AeroPlane : MonoBehaviour
 		GlobalVariables.lastLevel = Application.loadedLevel;
 		Timer = GameObject.FindGameObjectWithTag("timer");
 		TakeOff ();
+		color = renderer.material.color;
 	}
 	
 	// Update is called once per frame
 	void Update () 
-	{		
+	{	
 		if (gameEnd)
 		{
 			if (Input.GetKeyUp ("space") || Input.touchCount > 0)
@@ -70,8 +73,12 @@ public class AeroPlane : MonoBehaviour
 	
 	void OnCollisionEnter2D(Collision2D other)
 	{
+
 		if (gameEnd)
 		{
+			GameObject obj = Instantiate(explosion, gameObject.transform.position, Quaternion.identity) as GameObject;
+			color.a = 0;
+			renderer.material.color = color;
 			gameEnd = false;
 			StartCoroutine(Lose());
 		}

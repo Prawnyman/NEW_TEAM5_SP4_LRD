@@ -2,7 +2,13 @@ fileFormatVersion: 2
 guid: a20c68e236401fc47bb6bd991383e8ad
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - aeroplane: {fileID: 125662, guid: 6e23d222f1c0b7e4faf3278949bf29a0, type: 2}
+  - winSound: {fileID: 8300000, guid: c182f3238f11569498f9a334d54347e2, type: 3}
+  - loseSound: {fileID: 8300000, guid: a7a95fb6cce00544ebe53600aaf952a5, type: 3}
+  - takeoff: {fileID: 8300000, guid: 019db51daa987b8409966fccfd5315ee, type: 3}
+  - jump: {fileID: 8300000, guid: 8954bcba7a63b2146a7319ba1e49d74d, type: 3}
+  - explosion: {fileID: 156122, guid: 791cf556bd699bb458f266acd8d05117, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
