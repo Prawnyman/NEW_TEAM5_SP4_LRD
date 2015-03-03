@@ -9,28 +9,22 @@ public class ScoreManager : MonoBehaviour {
 	void Start() {
 		//GlobalVariables.levelsPlayed++;
 		finalScore = GlobalVariables.score + 100;
-		/*
-		nextLevel = UnityEngine.Random.Range (2, Application.levelCount);
-		while (nextLevel == GlobalVariables.lastLevel) {
-			nextLevel = UnityEngine.Random.Range (2, Application.levelCount);
-		}
-		*/
+		if (GlobalVariables.levelPassed == true && GlobalVariables.questionLevel == true && GlobalVariables.lives == 5)
+			finalScore = GlobalVariables.score + 500;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		guiText.text = "Score: " + GlobalVariables.score;
-		if (GlobalVariables.levelPassed == true)
+		if (GlobalVariables.levelPassed == true && GlobalVariables.questionLevel == true && GlobalVariables.lives == 5)
+		{
+			if (GlobalVariables.score < finalScore)
+				GlobalVariables.score += 10;
+		}
+		else if (GlobalVariables.levelPassed == true)
 		{
 			if (GlobalVariables.score < finalScore)
 				GlobalVariables.score += 2;
-			/*else
-				StartCoroutine (NextLevel());*/
-		}
+		} 
 	}
-	/*
-	static public IEnumerator NextLevel() {
-		yield return new WaitForSeconds (0.8f);
-		Application.LoadLevel (nextLevel);
-	}*/
 }

@@ -44,6 +44,7 @@ public class LevelInit : MonoBehaviour {
 	private IEnumerator Win()
 	{
 		GlobalVariables.levelPassed = true;
+		TimerScript.running = false;
 		if (!audio.isPlaying) {
 			audio.clip = winSound;
 			audio.Play();

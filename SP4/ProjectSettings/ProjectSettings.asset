@@ -109,7 +109,7 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: 46d4647eb8d5b3c44a15b35289cbc8c3, type: 3}
+    - m_Icon: {fileID: 2800000, guid: d52ce385b5d5e7943b199bb0030af07a, type: 3}
       m_Size: 128
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default

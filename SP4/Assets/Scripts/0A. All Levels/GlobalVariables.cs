@@ -7,13 +7,12 @@ public class GlobalVariables : MonoBehaviour {
 	static public bool levelPassed = false;
 	static public int score = 0;
 	static public int lastLevel = 0;
-	static public int levelsPlayed = 1;
+	static public int levelsPlayed = 0;
+	static public bool questionLevel = false;
 	static public bool soundEnabled = true;
 	
 	// Use this for initialization
 	void Start () {
-		//lives = 5;
-		//score = 0;
 	}
 	
 	// Update is called once per frame
@@ -25,6 +24,7 @@ public class GlobalVariables : MonoBehaviour {
 		levelPassed = false;
 		score = 0;
 		lastLevel = 0;
-		levelsPlayed = 1;
+		levelsPlayed = 0;
+		questionLevel = false;
 	}
 }
