@@ -24,6 +24,9 @@ public class PlaneScript : MonoBehaviour {
 		touchedGround = false;
 
 		this.transform.rotation = Quaternion.Euler(0, 0, finalRotation);
+
+		if(speed > 2.5f)
+			speed = 2.5f;
 	}
 	
 	// Update is called once per frame
@@ -42,10 +45,17 @@ public class PlaneScript : MonoBehaviour {
 			if(Input.GetKey(KeyCode.RightArrow)){
 				keyRotation -= 2.0f;
 			}
-
+			
 			finalRotation = initialRotation + keyRotation;
-#endif
 
+			if(finalRotation > 35.0f){
+				keyRotation -= finalRotation - 35.0f;
+			}
+			else if(finalRotation < -35.0f){
+				keyRotation += -35.0f - finalRotation;
+			}
+#endif
+			
 			//Limit amount of rotation plane can have
 			if (finalRotation > 35.0f) {
 				finalRotation = 35.0f;
@@ -56,7 +66,7 @@ public class PlaneScript : MonoBehaviour {
 			
 			//Update plane rotation
 			this.transform.rotation = Quaternion.Euler(0, 0, finalRotation);
-
+			
 			//Plane constantly moves downwards
 			this.transform.Translate((Vector3.down + Vector3.right * 2) * Time.deltaTime, Space.World);
 		}
@@ -67,19 +77,19 @@ public class PlaneScript : MonoBehaviour {
 			touchedGround = true;
 		}
 	}
-
+	
 	void updateInitialRotation(){
-		if(this.transform.position.y > -2.4f){
+		if(this.transform.position.y > -2.1f){
 			if(Mathf.Abs(initialRotation - newInitialRotation) <= 0.75f){
 				initialRotation = newInitialRotation;
 				newInitialRotation = Random.Range(-35, 35);
 			}
 			
 			if(newInitialRotation - initialRotation > 0){
-				initialRotation += 20.0f * Time.deltaTime * speed;
+				initialRotation += 20.0f * Time.deltaTime;
 			}
 			else if(newInitialRotation - initialRotation < 0){
-				initialRotation -= 20.0f * Time.deltaTime * speed;
+				initialRotation -= 20.0f * Time.deltaTime;
 			}
 		}
 	}
