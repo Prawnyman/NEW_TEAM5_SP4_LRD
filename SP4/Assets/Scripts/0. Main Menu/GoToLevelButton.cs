@@ -3,12 +3,13 @@ using System.Collections;
 using TouchScript.Gestures;
 using UnityEngine;
 
-public class PlayButton : MonoBehaviour
+public class GoToLevelButton : MonoBehaviour
 {
-
+	
 	public Sprite normal;
 	public Sprite down;
 	public AudioClip MainGameMusic;
+	public string level;
 	private SpriteRenderer spriteRenderer;
 	
 	private void OnEnable()
@@ -27,17 +28,16 @@ public class PlayButton : MonoBehaviour
 		GetComponent<PressGesture>().Pressed -= pressedHandler;
 		GetComponent<ReleaseGesture>().Released -= releasedHandler;
 	}
-
+	
 	private void tappedHandler(object sender, EventArgs e)
 	{
-		//Application.LoadLevel(UnityEngine.Random.Range(1, Application.levelCount));
-		Application.LoadLevel(UnityEngine.Random.Range(5, Application.levelCount - 1));
-		GlobalVariables.Restart();
-
+		Application.LoadLevel(level);
+		GlobalVariables.fromLevelSelect = true;
+		
 		//Play music
 		GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManagerScript>().changeMusic(MainGameMusic);
 	}
-
+	
 	private void pressedHandler(object sender, EventArgs e)
 	{
 		spriteRenderer.sprite = down;

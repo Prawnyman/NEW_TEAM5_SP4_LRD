@@ -3,12 +3,11 @@ using System.Collections;
 using TouchScript.Gestures;
 using UnityEngine;
 
-public class PlayButton : MonoBehaviour
+public class CreditsButton : MonoBehaviour
 {
-
+	
 	public Sprite normal;
 	public Sprite down;
-	public AudioClip MainGameMusic;
 	private SpriteRenderer spriteRenderer;
 	
 	private void OnEnable()
@@ -27,17 +26,12 @@ public class PlayButton : MonoBehaviour
 		GetComponent<PressGesture>().Pressed -= pressedHandler;
 		GetComponent<ReleaseGesture>().Released -= releasedHandler;
 	}
-
+	
 	private void tappedHandler(object sender, EventArgs e)
 	{
-		//Application.LoadLevel(UnityEngine.Random.Range(1, Application.levelCount));
-		Application.LoadLevel(UnityEngine.Random.Range(5, Application.levelCount - 1));
-		GlobalVariables.Restart();
-
-		//Play music
-		GameObject.FindGameObjectWithTag("MusicManager").GetComponent<MusicManagerScript>().changeMusic(MainGameMusic);
+		Application.LoadLevel("0E. Credits");
 	}
-
+	
 	private void pressedHandler(object sender, EventArgs e)
 	{
 		spriteRenderer.sprite = down;
