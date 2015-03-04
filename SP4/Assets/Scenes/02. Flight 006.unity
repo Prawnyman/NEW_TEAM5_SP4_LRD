@@ -371,7 +371,7 @@ GameObject:
   - 212: {fileID: 1629740150}
   - 114: {fileID: 1629740148}
   - 114: {fileID: 1629740152}
-  - 65: {fileID: 1629740149}
+  - 135: {fileID: 1629740149}
   m_Layer: 0
   m_Name: Pause Button
   m_TagString: Untagged
@@ -392,10 +392,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 102120, guid: c2b5923868f441e4a8e090cd8e4b8b02, type: 2}
---- !u!65 &1629740149
-BoxCollider:
+--- !u!135 &1629740149
+SphereCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6549064, guid: 49453e5cd94ba2a46b6663f6ca79a572,
+  m_PrefabParentObject: {fileID: 13529530, guid: 49453e5cd94ba2a46b6663f6ca79a572,
     type: 2}
   m_PrefabInternal: {fileID: 348662502}
   m_GameObject: {fileID: 1629740147}
@@ -403,7 +403,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.55999994, y: 2.55999994, z: .200000003}
+  m_Radius: 1.27999997
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1629740150
 SpriteRenderer:
@@ -436,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 1629740147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.55000019, y: 3.8499999, z: 0}
-  m_LocalScale: {x: .498131037, y: .498131037, z: .498131037}
+  m_LocalScale: {x: .650715768, y: .650715113, z: .650715113}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6

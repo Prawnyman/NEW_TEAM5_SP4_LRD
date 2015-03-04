@@ -12,6 +12,9 @@ public class WW2GuardScript : MonoBehaviour {
 	void Start () {
 		oldPos = this.transform.position;
 		animator = GetComponentInChildren<Animator>();
+
+		if(speed > 6.5f)
+			speed = 6.5f;
 	}
 	
 	// Update is called once per frame
