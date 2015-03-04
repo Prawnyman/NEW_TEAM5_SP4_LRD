@@ -1022,8 +1022,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1826708517}
   - 212: {fileID: 1826708516}
-  - 61: {fileID: 1826708515}
   - 114: {fileID: 1826708514}
+  - 114: {fileID: 1826708518}
+  - 135: {fileID: 1826708515}
   m_Layer: 0
   m_Name: Pause Button
   m_TagString: Untagged
@@ -1043,18 +1044,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6479368a6a2ca4488ff89b075d30a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1826708515
-BoxCollider2D:
+  pauseScreen: {fileID: 102120, guid: c2b5923868f441e4a8e090cd8e4b8b02, type: 2}
+--- !u!135 &1826708515
+SphereCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6146496, guid: 49453e5cd94ba2a46b6663f6ca79a572,
+  m_PrefabParentObject: {fileID: 13529530, guid: 49453e5cd94ba2a46b6663f6ca79a572,
     type: 2}
   m_PrefabInternal: {fileID: 1766550405}
   m_GameObject: {fileID: 1826708513}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 2.55999994, y: 2.55999994}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.27999997
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1826708516
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1075,7 +1078,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e76eb10084efad64da7f2d95d7624e3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1826708517
@@ -1090,6 +1093,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &1826708518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11449064, guid: 49453e5cd94ba2a46b6663f6ca79a572,
+    type: 2}
+  m_PrefabInternal: {fileID: 1766550405}
+  m_GameObject: {fileID: 1826708513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1235405773, guid: 20c2a163775f09b4cafa29b19d0c9204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedProps: 0
+  combineTouches: 1
+  combineTouchesInterval: .300000012
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  numberOfTapsRequired: 1
+  timeLimit: Infinity
+  distanceLimit: Infinity
 --- !u!1001 &1877447936
 Prefab:
   m_ObjectHideFlags: 0

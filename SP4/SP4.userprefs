@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\11. Quiz\QuizQuestions.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\0A. All Levels\PauseScreen.cs">
     <Files>
-      <File FileName="Assets\Scripts\11. Quiz\QuizQuestions.cs" Line="30" Column="9" />
-      <File FileName="Assets\Scripts\0A. All Levels\TimerScript.cs" Line="31" Column="44" />
+      <File FileName="Assets\Scripts\0A. All Levels\PauseScreen.cs" Line="17" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

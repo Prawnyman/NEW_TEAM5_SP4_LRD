@@ -14,26 +14,11 @@ public class PauseScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
-	
-	private void OnEnable()
-	{
-		// subscribe to gesture's Tapped event
-		GetComponent<TapGesture>().Tapped += tappedHandler;
-	}
-	
-	private void OnDisable()
-	{
-		// don't forget to unsubscribe
-		GetComponent<TapGesture>().Tapped -= tappedHandler;
-	}
-	
-	private void tappedHandler(object sender, EventArgs e)
-	{
-		Time.timeScale = 1.0f;
-		GlobalVariables.gamePaused = false;
-		DestroyObject(gameObject);
+		if(Input.touches.Length > 0 || Input.GetMouseButton(0)){
+			Time.timeScale = 1.0f;
+			GlobalVariables.gamePaused = false;
+			DestroyObject(gameObject);
+		}
 	}
 
 	void OnGUI(){

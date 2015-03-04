@@ -330,7 +330,7 @@ GameObject:
   - 212: {fileID: 550399302}
   - 114: {fileID: 550399304}
   - 114: {fileID: 550399306}
-  - 65: {fileID: 550399305}
+  - 135: {fileID: 550399305}
   m_Layer: 0
   m_Name: Pause Button
   m_TagString: Untagged
@@ -386,10 +386,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 102120, guid: c2b5923868f441e4a8e090cd8e4b8b02, type: 2}
---- !u!65 &550399305
-BoxCollider:
+--- !u!135 &550399305
+SphereCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6594644, guid: 49453e5cd94ba2a46b6663f6ca79a572,
+  m_PrefabParentObject: {fileID: 13529530, guid: 49453e5cd94ba2a46b6663f6ca79a572,
     type: 2}
   m_PrefabInternal: {fileID: 193803229}
   m_GameObject: {fileID: 550399301}
@@ -397,12 +397,12 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.55999994, y: 2.55999994, z: .200000003}
+  m_Radius: 1.27999997
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &550399306
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445672, guid: 49453e5cd94ba2a46b6663f6ca79a572,
+  m_PrefabParentObject: {fileID: 11449064, guid: 49453e5cd94ba2a46b6663f6ca79a572,
     type: 2}
   m_PrefabInternal: {fileID: 193803229}
   m_GameObject: {fileID: 550399301}
