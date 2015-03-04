@@ -31,15 +31,32 @@ public class AeroPlane : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{	
+		
 		if (gameEnd && !GlobalVariables.gamePaused)
-		{
-			if (Input.GetKeyUp ("space") || Input.touchCount > 0)
+		{		
+			#if UNITY_ANDROID
+			if(Input.touchCount == 1)
+			{
+				Touch touch = Input.GetTouch(0);
+				if(touch.phase == TouchPhase.Began)
+				{
+					audio.clip = jump;
+					audio.Play();
+					rigidbody2D.velocity = Vector2.zero;
+					rigidbody2D.AddForce (jumpForce);
+				}	
+			}
+			#endif
+			
+			#if UNITY_EDITOR
+			if(Input.GetKeyDown("space"))
 			{
 				audio.clip = jump;
 				audio.Play();
 				rigidbody2D.velocity = Vector2.zero;
 				rigidbody2D.AddForce (jumpForce);
 			}
+			#endif
 			
 			Vector2 screenPosition = Camera.main.WorldToScreenPoint (transform.position);
 			if (screenPosition.y > Screen.height || screenPosition.y < 0)
