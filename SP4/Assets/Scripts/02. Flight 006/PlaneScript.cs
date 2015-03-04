@@ -68,7 +68,7 @@ public class PlaneScript : MonoBehaviour {
 			this.transform.rotation = Quaternion.Euler(0, 0, finalRotation);
 			
 			//Plane constantly moves downwards
-			this.transform.Translate((Vector3.down + Vector3.right * 2) * Time.deltaTime, Space.World);
+			this.transform.Translate((Vector3.down + Vector3.right * 2) * (Time.deltaTime + speed * 0.005f), Space.World);
 		}
 	}
 

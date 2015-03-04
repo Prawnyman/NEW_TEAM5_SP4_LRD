@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\0. Main Menu\GameMusicScript.cs" />
      <Compile Include="Assets\Scripts\0. Main Menu\GoToLevelButton.cs" />
      <Compile Include="Assets\Scripts\0. Main Menu\LevelSelectButton.cs" />
+     <Compile Include="Assets\Scripts\0. Main Menu\MainMenuButton.cs" />
      <Compile Include="Assets\Scripts\0. Main Menu\MusicButton.cs" />
      <Compile Include="Assets\Scripts\0. Main Menu\PlayButton.cs" />
      <Compile Include="Assets\Scripts\01. Spray Water\FireObject.cs" />
