@@ -874,7 +874,7 @@ Transform:
   m_PrefabInternal: {fileID: 1234884011}
   m_GameObject: {fileID: 536535374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.92999983, y: -.0799999982, z: -10}
+  m_LocalPosition: {x: 6.80999994, y: -.0799999982, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 499718780}
@@ -1809,8 +1809,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1085965329}
   - 212: {fileID: 1085965328}
-  - 61: {fileID: 1085965327}
   - 114: {fileID: 1085965326}
+  - 114: {fileID: 1085965330}
+  - 135: {fileID: 1085965327}
   m_Layer: 0
   m_Name: Pause Button
   m_TagString: Untagged
@@ -1830,18 +1831,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6479368a6a2ca4488ff89b075d30a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1085965327
-BoxCollider2D:
+  pauseScreen: {fileID: 102120, guid: c2b5923868f441e4a8e090cd8e4b8b02, type: 2}
+--- !u!135 &1085965327
+SphereCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6146496, guid: 49453e5cd94ba2a46b6663f6ca79a572,
+  m_PrefabParentObject: {fileID: 13529530, guid: 49453e5cd94ba2a46b6663f6ca79a572,
     type: 2}
   m_PrefabInternal: {fileID: 673675002}
   m_GameObject: {fileID: 1085965325}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 2.55999994, y: 2.55999994}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.27999997
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1085965328
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1877,6 +1880,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!114 &1085965330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11449064, guid: 49453e5cd94ba2a46b6663f6ca79a572,
+    type: 2}
+  m_PrefabInternal: {fileID: 673675002}
+  m_GameObject: {fileID: 1085965325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1235405773, guid: 20c2a163775f09b4cafa29b19d0c9204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedProps: 0
+  combineTouches: 1
+  combineTouchesInterval: .300000012
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  numberOfTapsRequired: 1
+  timeLimit: Infinity
+  distanceLimit: Infinity
 --- !u!1001 &1211567117
 Prefab:
   m_ObjectHideFlags: 0
@@ -2007,7 +2033,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 457790, guid: e1c35cc4033aa104ab17e2398f3609e6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.92999983
+      value: 6.80999994
       objectReference: {fileID: 0}
     - target: {fileID: 457790, guid: e1c35cc4033aa104ab17e2398f3609e6, type: 2}
       propertyPath: m_LocalPosition.y
