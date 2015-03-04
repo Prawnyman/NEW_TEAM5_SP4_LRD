@@ -8,6 +8,8 @@ public class Beginning : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		
+		TapStart = false;
 		if (!TapStart) 
 		{
 			GetComponent<SpriteRenderer>().enabled = true;
