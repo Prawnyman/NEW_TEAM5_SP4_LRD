@@ -4,7 +4,7 @@ using System.Collections;
 public class AeroPlane : MonoBehaviour 
 {
 	public float FlySpeed = 1.0f;
-	public Vector2 jumpForce = new Vector2(0, 300);
+	public Vector2 jumpForce = new Vector2(0, 150);
 	//Vector3 velocity = Vector3.zero;
 
 	public AudioClip winSound;

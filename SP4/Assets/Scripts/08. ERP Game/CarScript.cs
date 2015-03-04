@@ -11,6 +11,10 @@ public class CarScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if(difficulty >= 9.0f)
+		{
+			difficulty = 9.0f;
+		}
 		speed = new Vector3(10.0f + difficulty, 0, 0);
 		Timer = GameObject.FindGameObjectWithTag("timer");
 	}

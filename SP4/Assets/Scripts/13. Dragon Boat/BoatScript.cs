@@ -77,7 +77,7 @@ public class BoatScript : MonoBehaviour {
 					}
 					if(touch.phase == TouchPhase.Ended && currentRow == row.Left)
 					{
-						if(yChange < -100 && fp.x < Screen.width / 2 && lp.x < Screen.width / 2)
+						if(yChange < -50 && fp.x < Screen.width / 2 && lp.x < Screen.width / 2)
 						{
 							if(currentTime - timeLastRowed > 0.15f){
 								speed.x = maxSpeed;
@@ -93,7 +93,7 @@ public class BoatScript : MonoBehaviour {
 					}
 					if(touch.phase == TouchPhase.Ended && currentRow == row.Right)
 					{
-						if(yChange < -100 && fp.x > Screen.width / 2 && lp.x > Screen.width / 2)
+						if(yChange < -50 && fp.x > Screen.width / 2 && lp.x > Screen.width / 2)
 						{
 							if(currentTime - timeLastRowed > 0.15f){
 								speed.x = maxSpeed;
