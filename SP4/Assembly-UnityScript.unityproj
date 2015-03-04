@@ -53,7 +53,7 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript">
- <HintPath>C:/Users/Mr. Fatal/Desktop/School Work/NEW_TEAM5_SP4_LRD/SP4/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+ <HintPath>C:/Users/Shawn/Desktop/DM2295 Game Development Project/NEW_TEAM5_SP4_LRD/SP4/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

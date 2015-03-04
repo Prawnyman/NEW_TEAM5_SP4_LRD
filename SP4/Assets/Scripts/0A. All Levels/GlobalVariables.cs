@@ -11,7 +11,8 @@ public class GlobalVariables : MonoBehaviour {
 	static public bool questionLevel = false;
 	static public bool soundEnabled = true;
 	static public bool gamePaused = false;
-	
+	static public bool fromLevelSelect = false;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -27,5 +28,6 @@ public class GlobalVariables : MonoBehaviour {
 		lastLevel = 0;
 		levelsPlayed = 0;
 		questionLevel = false;
+		fromLevelSelect = false;
 	}
 }
