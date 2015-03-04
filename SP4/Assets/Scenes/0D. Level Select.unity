@@ -1331,7 +1331,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11464354, guid: ad9ba77b355966b44b6995cfd8057161, type: 2}
       propertyPath: level
-      value: 07. Dodge Bomb
+      value: 07. DodgeBomb
       objectReference: {fileID: 0}
     - target: {fileID: 11464354, guid: ad9ba77b355966b44b6995cfd8057161, type: 2}
       propertyPath: normal
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   normal: {fileID: 21300000, guid: 200efc0760a8d534b8a6fd4a24139311, type: 3}
   down: {fileID: 21300000, guid: 32c6b329fdc371a41bd80b2f8ae99359, type: 3}
   MainGameMusic: {fileID: 8300000, guid: 67057652760623b41a5775515f771ef1, type: 3}
-  level: 07. Dodge Bomb
+  level: 07. DodgeBomb
 --- !u!114 &1543160342
 MonoBehaviour:
   m_ObjectHideFlags: 0
