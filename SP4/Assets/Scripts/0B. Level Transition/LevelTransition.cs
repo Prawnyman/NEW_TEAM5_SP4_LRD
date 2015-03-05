@@ -7,9 +7,9 @@ public class LevelTransition : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GlobalVariables.levelsPlayed++;
-		nextLevel = UnityEngine.Random.Range (3, Application.levelCount - 1);
+		nextLevel = UnityEngine.Random.Range (5, Application.levelCount - 1);
 		while (nextLevel == GlobalVariables.lastLevel) {
-			nextLevel = UnityEngine.Random.Range (3, Application.levelCount - 1);
+			nextLevel = UnityEngine.Random.Range (5, Application.levelCount - 1);
 		}
 	}
 	
