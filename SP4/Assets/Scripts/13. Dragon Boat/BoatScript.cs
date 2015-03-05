@@ -4,7 +4,7 @@ using System.Collections;
 public class BoatScript : MonoBehaviour {
 	
 	private Vector3 speed = new Vector3(0.0f, 0, 0);
-	private float maxSpeed = 2.0f;
+	private float maxSpeed = 2.5f;
 	private Vector3 fp;
 	private Vector3 lp;
 	
